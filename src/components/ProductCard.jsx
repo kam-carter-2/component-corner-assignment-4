@@ -1,6 +1,11 @@
+import { Link } from "react-router-dom";
 import "./ProductCard.css";
 
+// AI assistance: ChatGPT was used to help add React Router
+// product detail navigation to this component.
+
 function ProductCard({
+  id,
   name,
   price,
   image,
@@ -9,7 +14,11 @@ function ProductCard({
 }) {
   return (
     <div className="product-card">
-      <img src={image} alt={name} className="product-image" />
+      <img
+        src={image}
+        alt={name}
+        className="product-image"
+      />
 
       <div className="product-info">
         <h2>{name}</h2>
@@ -28,6 +37,13 @@ function ProductCard({
         >
           Add to Cart
         </button>
+
+        <Link
+          to={`/products/${id}`}
+          className="view-details-button"
+        >
+          View Details
+        </Link>
       </div>
     </div>
   );

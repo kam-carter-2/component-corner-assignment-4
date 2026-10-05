@@ -145,4 +145,4 @@ function App() {
 //    git clone https://github.com/your-username/react-shopping-cart.git
 //    ```
 
-export default App;$
+export default App;
